@@ -13,9 +13,9 @@ This project analyzes global cybersecurity threats from 2015-2024 and predicts t
 - Country
 - Year
 - Attack Type (DDoS, Malware, Man-in-the-Middle, Phishing, Ransomware, SQL Injection)
-- Target Industry (Education, Finance, Government, Healthcare, IT, Retail, Telecommunications)
+- Target Industry (Banking, Education, Government, Healthcare, IT, Retail, Telecommunications)
 - Number of Affected Users
-- Attack Source (Hacker Group, Insider, Nation-state, Script Kiddie)
+- Attack Source (Hacker Group, Insider, Nation-state, Unknown)
 - Security Vulnerability Type
 - Defense Mechanism Used
 - Incident Resolution Time (Hours)
