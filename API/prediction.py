@@ -36,3 +36,20 @@ class PredictionInput(BaseModel):
 class PredictionOutput(BaseModel):
     predicted_unemployment_rate: float
 
+
+# Prediction endpoint
+@app.post("/predict", response_model=PredictionOutput)
+def predict(data: PredictionInput):
+    input_data = np.array([[
+        data.completion_rate_upper_secondary_male,
+        data.completion_rate_upper_secondary_female,
+        data.gross_tertiary_education_enrollment,
+        data.youth_literacy_rate_male,
+        data.youth_literacy_rate_female,
+        data.birth_rate
+    ]])
+    
+    input_scaled = scaler.transform(input_data)
+    prediction = model.predict(input_scaled)[0]
+    
+    return PredictionOutput(predicted_unemployment_rate=round(prediction, 2))
