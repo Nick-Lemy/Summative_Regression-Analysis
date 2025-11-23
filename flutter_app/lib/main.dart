@@ -40,7 +40,7 @@ class _PredictionPageState extends State<PredictionPage> {
   bool _isLoading = false;
 
   // UPDATE THIS URL after deploying to Render
-  final String apiUrl = 'https://your-app-name.onrender.com/predict';
+  final String apiUrl = 'http://127.0.0.1:8000/predict';
 
   Future<void> _predict() async {
     if (!_formKey.currentState!.validate()) return;
@@ -65,6 +65,11 @@ class _PredictionPageState extends State<PredictionPage> {
       );
 
       if (response.statusCode == 200) {
+        // Check if the response body is empty or not valid JSON
+        if (response.body.isEmpty) {
+          throw Exception('Empty response from server');
+        }
+
         final data = jsonDecode(response.body);
         setState(() {
           _result = 'Predicted Unemployment Rate: ${data['predicted_unemployment_rate']}%';
