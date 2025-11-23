@@ -5,8 +5,8 @@ import joblib
 import numpy as np
 
 # Load model and scaler
-model = joblib.load('best_model.pkl')
-scaler = joblib.load('scaler.pkl')
+model = joblib.load('../model/best_model.pkl')
+scaler = joblib.load('../model/scaler.pkl')
 
 # Create FastAPI app
 app = FastAPI(
