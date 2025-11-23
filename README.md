@@ -50,7 +50,7 @@ Providing cybersecurity education in Africa, especially in Congo-Brazzaville. Th
 
 ## Project Structure
 ```
-summative/
+Summative_Regression-Analysis/
 ├── linear_regression/
 │   └── multivariate.ipynb       # Model training notebook
 ├── API/
