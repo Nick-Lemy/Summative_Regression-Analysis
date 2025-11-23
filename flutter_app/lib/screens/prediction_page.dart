@@ -30,7 +30,7 @@ class _PredictionPageState extends State<PredictionPage> with SingleTickerProvid
   bool _isLoading = false;
   bool _hasError = false;
 
-  final String apiUrl = 'http://127.0.0.1:8000/predict';
+  final String apiUrl = 'https://summative-regression-analysis.onrender.com/predict';
 
   @override
   void initState() {
