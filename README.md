@@ -46,7 +46,7 @@ Providing cybersecurity education in Africa, especially in Congo-Brazzaville. Th
 **API:** https://summative-regression-analysis.onrender.com/docs
 
 ## Video Demo
-[YouTube Video Link](https://youtube.com/your-video-link)
+[YouTube Video Link](https://www.youtube.com/watch?v=b2WGcmWm8eM)
 
 ## Project Structure
 ```
